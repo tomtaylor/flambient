@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'flambient'
+
+if ARGV[0].nil?
+  raise "No input path supplied"
+end
+
+if ARGV[1].nil?
+  raise "No output path supplied"
+end
+
+image = ChunkyPNG::Image.from_file(ARGV[0])
+processor = Flambient::Processor.new(image, 64)
+
+new_image = processor.process
+new_image.save(ARGV[1])
