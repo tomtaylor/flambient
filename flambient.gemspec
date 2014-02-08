@@ -13,6 +13,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.executables   = ["flambient"]
 
-  s.add_dependency "chunky_png"
-  s.add_dependency "oily_png"
+  s.add_dependency "chunky_png", '~> 1.2.9'
+  s.add_dependency "oily_png", '~> 1.1.0'
+
+  s.add_development_dependency "rake"
 end
